@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.8;
+}
+
+:root  {
+    --main-color:  #3535ec;
+    --main-hover: crimson;
+}
+
+body {
+    background-color: var(--main-color) ;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--main-hover);
+}
+
+/* struttura base giochi */
+
+.board {
+    width: 80%;
+    margin: 50px auto;
+    color: white;
+}
+
+.game-area {
+    width: calc(100% / 2 - 10px);
+    height: 500px;
+    margin-right: 20px;
+}
+
+.game-info {
+    width: calc(100% / 3 - 10px);
+    height: 200px;
+    padding: 10px;
+    border: 1px solid white;
+    margin-top: 5px;
+}
