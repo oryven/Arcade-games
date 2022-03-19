@@ -33,7 +33,7 @@ for (let i = 0; i < cells.length; i++) {
         if (hasWon) {
             showAlert(`ha vinto ${sign}`)
         } else if (turn === 9) {
-            showAlert(`pareggio}`)
+            showAlert(`pareggio`)
         } 
             
         
@@ -70,18 +70,7 @@ function checkVictory () {
     return false;
 }
 
-function showAlert(messaggio){
 
-    const gameArea = document.querySelector('.grid')
-
-    const alert = `
-    <div class"game-alert>
-        <div class"alert-message>${messaggio}</div>
-    </div> `;
-
-
-     
-}
 
 
 

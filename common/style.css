@@ -44,6 +44,7 @@ a:hover {
     width: calc(100% / 2 - 10px);
     height: 500px;
     margin-right: 20px;
+    position: relative;
 }
 
 .game-info {
@@ -52,4 +53,18 @@ a:hover {
     padding: 10px;
     border: 1px solid white;
     margin-top: 5px;
+}
+
+/* messaggio di fine gioco */
+
+.game-alert {
+    position: absolute;
+    background-color: var(--main-hover);
+    padding: 30px 50px;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
 }
