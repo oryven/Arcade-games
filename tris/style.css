@@ -6,6 +6,14 @@
     flex-wrap: wrap;
 }
 
+.game-area.tris {
+    width: calc(100% / 2 - 10px);
+    height: 500px;
+    margin-right: 20px;
+    position: relative;
+    border: 1px solid white;
+}
+
 .cell {
     height: calc(100% / 3 - 10px);
     width: calc( 100% / 3 - 10px);
