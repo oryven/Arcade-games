@@ -10,12 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../common/style.css">
     <link rel="stylesheet" href="style.css">
-    <title>Tris - Arcade mania</title>
+    <title>Whack a Bug - Arcade mania</title>
 </head>
 <body>
     <div class="board d-flex justify-content-center">
 
-        <div class="game-area tris">
+        <div class="game-area whack-bug">
             <div id="grid">
                 <div class="cell"></div>
                 <div class="cell"></div>
@@ -29,12 +29,17 @@
             </div>
         </div>
         <div class="game-info">
-            <h1>Tris</h1>
+            <h1>Whack a Bug</h1>
             <p>Allinea i simboli in verticale, orizzontale o in diagonale</p>
+            <div class="d-flex">
+                <h5>Score: <span id="score"></span></h5>
+                <h5 class="mx-2">Time: <span id="time"></span></h5>
+            </div>
+            
             <a href="../index.html">Torna alla home</a>
         </div>
     </div>
     <script src="../common/utils.js"></script>
-    <script src="script.js"></script>  
+    <script src="script.js"></script>
 </body>
 </html>

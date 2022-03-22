@@ -43,10 +43,13 @@ a:hover {
 
 .game-info {
     width: calc(100% / 3 - 10px);
-    height: 250px;
-    padding: 10px;
+    max-height: 350px;
+    padding: 5px;
     margin-left: 10px;
     border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* messaggio di fine gioco */

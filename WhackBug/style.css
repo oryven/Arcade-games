@@ -1,0 +1,38 @@
+.game-area.whack-bug {
+    width: calc(100% / 2 - 10px);
+    height: 500px;
+    margin-right: 20px;
+    position: relative;
+    border: 1px solid white;
+}
+
+#grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.cell {
+    height: calc(100% / 3 - 10px);
+    width: calc( 100% / 3 - 10px);
+    margin: 5px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    background-position: center;
+    background-size: contain;
+}
+
+.bug {
+    background-image: url('bug.png');
+}
+.splat {
+    background-image: url('bug-splat.png');
+}
+
