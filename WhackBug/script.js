@@ -4,7 +4,7 @@ const cells = document.querySelectorAll('.cell');
 
 let score = 0;
 
-let time = 30
+let time = 5;
 
 scoreDisplay.innerText = score ;
 
@@ -13,6 +13,8 @@ timeDisplay.innerText = time;
 
 
 //  ogni 800 millisecondi viene richiamata la funzione randomBug che prima "pulisce" l'array poi aggiunge casualmente la classe bug
+
+let bugPosition = setInterval(randomBug, 800);
 
 function randomBug() {
 
@@ -31,7 +33,7 @@ function randomBug() {
     // }
 }
 
-setInterval(randomBug, 800);
+// ciclo tutta l'array per rimuovere la classe bug
 
 function remuveBug() {
     for (let i = 0; i < cells.length; i++) {
@@ -39,6 +41,8 @@ function remuveBug() {
         cellToClean.classList.remove('bug');
     }
 }
+
+// ciclio tutta l'array per rendere scatenare un evento al clik di ogni cella
 
 for (let i = 0; i < cells.length; i++) {
     const cell = cells[i];
@@ -48,8 +52,30 @@ for (let i = 0; i < cells.length; i++) {
         if (cell.classList.contains('bug')) {
             score++;
             scoreDisplay.innerText = score;
+
             cell.classList.remove('bug');
             cell.classList.add('splat');
+
+            setTimeout(function() {
+                cell.classList.remove('splat');
+            },500)
         }
     }) 
 }
+
+/* ogni secondo decremento il valore iniziale di time, quando arriva a zero interrompi il setInterval e il movimento casuale del bug, elimino tutte le classi bug e richiamo la funzione showAlert
+*/
+
+const timer = setInterval(countDown, 1000);
+
+function countDown() {
+    time--;
+    timeDisplay.innerText = time;
+    if (time === 0) {
+        clearInterval(timer);
+        clearInterval(bugPosition);
+        remuveBug();
+        showAlert(`Punteggio ${score}`);
+    }
+}
+
