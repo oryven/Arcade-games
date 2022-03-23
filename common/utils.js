@@ -10,3 +10,7 @@ function showAlert(messaggio){
     gameArea.innerHTML += alert;
      
 }
+
+function playAudio() { 
+    x.play(); 
+} 

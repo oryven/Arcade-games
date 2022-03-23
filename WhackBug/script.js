@@ -1,10 +1,11 @@
 const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time')
 const cells = document.querySelectorAll('.cell');
+var x = document.getElementById("myAudio"); 
 
 let score = 0;
 
-let time = 5;
+let time = 10;
 
 scoreDisplay.innerText = score ;
 
@@ -14,7 +15,7 @@ timeDisplay.innerText = time;
 
 //  ogni 800 millisecondi viene richiamata la funzione randomBug che prima "pulisce" l'array poi aggiunge casualmente la classe bug
 
-let bugPosition = setInterval(randomBug, 800);
+let bugPosition = setInterval(randomBug, 2000);
 
 function randomBug() {
 
@@ -53,6 +54,8 @@ for (let i = 0; i < cells.length; i++) {
             score++;
             scoreDisplay.innerText = score;
 
+            cell.onclick = playAudio();
+
             cell.classList.remove('bug');
             cell.classList.add('splat');
 
@@ -78,4 +81,5 @@ function countDown() {
         showAlert(`Punteggio ${score}`);
     }
 }
+
 
