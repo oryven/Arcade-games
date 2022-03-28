@@ -1,0 +1,38 @@
+
+:root {
+    --pixel-road: 60px;
+}
+
+.game-area.running-duck {
+    width: calc(var(--pixel-road) * 10);
+    height: 500px;
+    margin-right: 20px;
+    position: relative;
+    border-bottom: 2px solid white;
+}
+
+#grid > div {
+    width: var(--pixel-road);
+    height: var(--pixel-road);
+}
+
+#grid {
+    align-items: flex-end;
+    height: 100%;
+}
+
+.duck {
+    background-image: url('./images/duck.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.plant {
+    background-image: url('./images/plant.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.jump-duck {
+    transform: translate(0, -120%);
+}

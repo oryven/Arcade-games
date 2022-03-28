@@ -30,6 +30,7 @@ a {
 
 a:hover {
     color: var(--main-hover);
+    text-decoration: none;
 }
 
 /* struttura base giochi */
@@ -46,10 +47,10 @@ a:hover {
     max-height: 350px;
     padding: 5px;
     margin-left: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 /* messaggio di fine gioco */

@@ -5,7 +5,7 @@ var x = document.getElementById("myAudio");
 
 let score = 0;
 
-let time = 10;
+let time = 30;
 
 scoreDisplay.innerText = score ;
 
@@ -15,7 +15,7 @@ timeDisplay.innerText = time;
 
 //  ogni 800 millisecondi viene richiamata la funzione randomBug che prima "pulisce" l'array poi aggiunge casualmente la classe bug
 
-let bugPosition = setInterval(randomBug, 2000);
+let bugPosition = setInterval(randomBug, 800);
 
 function randomBug() {
 
