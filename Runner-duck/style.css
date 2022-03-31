@@ -25,14 +25,15 @@
     background-image: url('./images/duck.png');
     background-size: contain;
     background-repeat: no-repeat;
+    transition: transform 0.3s; 
 }
 
-.plant {
+.plant:not(.duck) {
     background-image: url('./images/plant.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .jump-duck {
-    transform: translate(0, -120%);
+    transform: translate(0, -130%);
 }
