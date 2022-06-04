@@ -1,0 +1,43 @@
+:root {
+    --cell-size: 40px;
+    --grid-size: 15;
+}
+
+.game-area.space {
+    border: 1px solid white;
+}
+
+#grid {
+    width: calc(var(--cell-size) * var(--grid-size));
+    height: calc(var(--cell-size) * var(--grid-size));
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid > div {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.alien {
+    background-image: url('./images/alien.png');
+}
+
+.spaceship {
+    background-image: url('./images/spaceship.png');
+}
+
+.laser {
+    background-image: url('./images/laser.png');
+}
+
+.boom {
+    background-image: url('./images/boom.png');
+}
