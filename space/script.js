@@ -21,6 +21,13 @@ for (let i = 0; i < rigaPerColonna; i++) {
     
 }
 
+function checkForHumanWin() {
+    if(aliensKilled.length === aliens.length) {
+        showAlert('Gli umani hanno vinto');
+        clearInterval(alienMoveIntVal);
+    }
+}
+
 function drawAlians() {
 
     for (let i = 0; i < aliens.length; i++) {
@@ -76,7 +83,7 @@ function mouveAliens() {
     drawAlians()
 }
 drawAlians()
-setInterval( mouveAliens, 500)
+alienMoveIntVal = setInterval( mouveAliens, 500)
 
 
 // ASTRONAVE
@@ -132,6 +139,8 @@ function shoot(event) {
             const killed = aliens.indexOf(laserIndex);
             console.log(killed);
             aliensKilled.push(killed);
+
+            checkForHumanWin();
 
             return;
         }
